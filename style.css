@@ -1,0 +1,733 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a { /* chci, aby se odkazy obecně chovaly takhle: */
+    color: #000;
+    text-decoration: none; /*nechci podtržítko*/
+    
+  }
+
+  a:visited,  
+  a:hover,  
+  a:active {  
+      color: #000; /* U všech stavů zůstane černá */
+      text-decoration: none; /* Zůstane bez podtržení */
+  }
+
+/*.........header........*/
+
+
+
+.container {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between; /* Logo vlevo, jazykový přepínač vpravo */
+  align-items: center;
+  padding: 15px 0;
+  font-family: "Roboto Mono", serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.logoup {
+  width: auto; /* Logo nebude roztahovat celý prostor */
+  margin-right: auto; /* Přitlačí logo vlevo */
+}
+
+.logoup a img {
+  width: 200px; /* Pevná šířka loga */
+}
+
+/* animace loga */
+@keyframes fadeInGlow {
+  0% {
+      filter: brightness(0.3);
+      opacity: 0;
+  }
+  100% {
+      filter: brightness(1);
+      opacity: 1;
+  }
+}
+
+.logoup img {
+  animation: fadeInGlow 2s ease-in-out forwards;
+}
+
+
+.engIcon {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto; /* Přitlačí jazykový přepínač doprava */
+}
+
+.engIcon img {
+  width: 25px; /* Pevná velikost vlajky */
+  height: auto;
+  margin-right: 10px;
+}
+
+
+/* header photo */
+.header {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  overflow: hidden; /* Aby se prvky neukázaly před animací */
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.text-section h1, 
+.text-section h2 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.text-section h2 {
+  animation-delay: 0.6s;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.buttons a {
+  color: #ffffff;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 10px;
+}
+.buttons button:hover {
+  background-color: rgb(68, 68, 68);
+}
+
+.image {
+  flex-shrink: 0;
+  width: 550px;
+  height: 350px;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideIn 1s ease-out forwards;
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* uvodni slovo */
+
+main {
+  margin: 40px 0;
+}
+
+.descrpt {
+  margin: 80px auto;
+}
+
+.text {
+  width: 65%;            
+  margin: 0 auto;        /* Centrovaní na stránce */
+  text-align: left;    /* Zarovnání textu na střed (volitelné) */
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* photo */
+
+
+.photo-info {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+  margin: 40px auto;
+}
+
+.photo-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.photo-wrap img {
+  width: 100%;  /* Každý obrázek zabere 30 % šířky */
+  height: auto; /* Zachová poměr stran */
+  display: block; 
+  border-radius: 15px;
+}
+
+.photo-text h1 {
+  font-family: "Roboto Mono", serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 200;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.photo-info p {
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.photo-info p i {
+  width: 35px;
+}
+
+
+/* menu */
+
+.menu {
+  margin-top: 70px;
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.menu h1 {
+  width: 85%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+nav ul li {
+  list-style-type: none;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  white-space: nowrap;
+  position: relative;
+  color: black; /* Barva textu */
+}
+
+/* Animovaná čára */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Animace při najetí myší */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Podtržení aktivní položky */
+nav ul li a.active::after {
+  width: 100%;
+}
+
+
+.drink-menu {
+  margin-top: 70px;
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.drink-menu h1 {
+  width: 85%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.menu-wraper {
+  max-width: 800px; /* Omezí šířku menu */
+  margin: 30px auto; /* Centrované na stránce */
+}
+
+.menu-text h3 {
+  text-align: left; /* Nadpisy zarovnané doleva */
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between; /* Název vlevo, cena vpravo */
+  align-items: center; /* Vertikální zarovnání */
+  padding: 5px 0; /* Mezera mezi položkami */
+  border-bottom: 1px solid #ddd; /* Oddělovací čára */
+}
+
+.menu-item p {
+  margin: 0;
+}
+
+.menu-item p:first-child {
+  flex: 1; /* Název vyplní dostupné místo */
+  text-align: left; /* Explicitní zarovnání doleva */
+}
+
+.menu-price {
+  font-weight: bold;
+  width: 100px; /* Šířka ceny zajišťuje stejné zarovnání vpravo */
+  text-align: right;
+  white-space: nowrap; /* Zabrání zalomení ceny na nový řádek */
+}
+
+.item-under {
+  font-style: italic;
+  font-size: 12px;
+}
+
+.slidephoto {
+  width: 50%;
+  margin: 150px auto;
+  text-align: center;
+}
+
+.slidephoto h1 {
+  margin: 80px 0px 50px;
+}
+
+
+/* REZERVACE */
+
+.reserve-form h1{
+  width: 85%;
+  margin: 70px auto;
+  text-align: center;
+}
+
+.form-main-box {
+  width: 75%;
+  border: 2px solid black;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dva stejně široké sloupce */
+  gap: 15px; /* Rozestupy mezi prvky */
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group p {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.full-width {
+  grid-column: span 2; /* Prvky, které mají být přes oba sloupce */
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/* footer */
+
+.cont {
+  width: 65%;
+  margin: auto; /* aby se nám to šuplo na střed */
+  text-align: center;
+  margin-bottom: 0;
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kontakt {
+    padding: 100px 0;
+  }
+
+.kontaktGrey {
+    padding: 0 30px 30px;
+    background-color: white;
+  }
+  
+.kontaktFlex {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+.kontaktFlex .pataText {
+    padding: 0;
+  }
+.pataText p i { /* abych měl ikonky stejně zarovnaný */
+    width: 35px;
+  }
+.karty i{
+    font-size: 35px;
+  }
+
+iframe {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .socIcon {
+    font-size: 25px;
+    text-align: center; /* Vycentrování obsahu */
+    margin-top: 20px; /* Volitelné – mezera nahoře */
+  }
+
+.copyright {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+
+/* events and catering */
+
+/* nabidka */
+.descrpt-types {
+  width: 90%;
+  margin: 150px auto;
+  display: flex;
+  justify-content: space-around; /* Mezera mezi bloky */
+  flex-wrap: wrap; /* Zajistí zalomení na menších obrazovkách */
+  gap: 10px; /* Mezera mezi boxy */
+  text-align: center;
+}
+
+.b-text {
+  flex: 1; /* Rovnoměrné rozložení prostoru */
+  min-width: 250px; /* Zajistí, že se nerozbije na menších obrazovkách */
+  max-width: 400px; /* Aby nebyly příliš široké */
+  padding: 20px;
+  border-radius: 10px;
+  background: rgb(251, 251, 251);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.b-text h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.b-text i {
+  margin-right: 8px;
+  font-size: 24px;
+  color: #d79a1a; /* Barva ikon */
+}
+
+.b-text p {
+  text-align: left;
+}
+
+/* fotogalerie event */
+
+.photogallery {
+  width: 100%;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.containerphoto {
+  width: 1600px;
+  margin: auto;
+}
+
+.subcontainer {
+  width: 90%;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+.img {
+  width: 100%;
+  min-height: 275px;
+  background-position: center;
+  background-size: cover;
+}
+
+.img:nth-last-child(1){
+  background-image: url(photo/svatba.jpg);
+} 
+
+.img:nth-last-child(2){
+  background-image: url(photo/Classic.jpg);
+} 
+
+.img:nth-last-child(3){
+  background-image: url(photo/Bluecheese.jpg);
+} 
+
+.img:nth-last-child(4){
+  background-image: url(photo/lampy1.jpeg);
+} 
+
+
+@media(max-width:1600px){
+  .containerphoto{
+      width: 100%;
+  }
+}
+
+/* formular */
+
+.catering-form {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.catering-form h1 {
+  text-align: center;
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.catering-box {
+  width: 75%;
+  background: rgb(251, 251, 251);
+  margin: 0 auto;
+  box-shadow: 4px 4px 4px rgb(207, 206, 206);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Zarovná inputy na střed */
+}
+
+.catering-box input, textarea, button {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 30px auto; /* Mezera mezi prvky */
+}
+
+textarea {
+  height: 100px; /* Zvýšení výšky textového pole */
+}
+
+.butt {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.butt:hover {
+  background-color: #e9e9e9;
+  border: 2px solid rgb(150, 62, 0);
+}
+
+/* RESPONSIVITA */
+@media (max-width: 1024px) {
+  .header {
+      flex-direction: column;
+      width: 90%;
+      text-align: center;
+  }
+  .image {
+      width: 100%;
+      height: auto;
+  }
+  .photo-info {
+      flex-direction: column;
+      align-items: center;
+  }
+  .photo-wrap {
+      width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerTop {
+      flex-direction: column;
+      text-align: center;
+  }
+  .buttons {
+      flex-direction: column;
+  }
+  .photo-info {
+      flex-direction: column;
+      text-align: center;
+  }
+  .photo-text {
+      width: 100%;
+  }
+  nav ul {
+    gap: 10px; /* Ještě menší mezery pro lepší čitelnost */
+    justify-content: center; /* Zarovná položky doleva */
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+      width: 100%;
+      padding: 10px;
+  }
+  .photo-info {
+      width: 100%;
+  }
+  .menu-wraper {
+      max-width: 100%;
+      padding: 0 10px;
+  }
+  .form-main-box {
+      width: 90%;
+      padding: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* Jeden sloupec na menších obrazovkách */
+  }
+
+  .full-width {
+    grid-column: span 1; /* Zajistí, že prvky se srovnají pod sebe */
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .cont {
+    width: 90%; /* Na menších displejích větší šířka */
+  }
+
+  .kontaktFlex {
+    display: block; /* Přepnutí do sloupcového layoutu */
+    text-align: center; /* Zarovnání obsahu na střed */
+  }
+
+  .pataText,
+  .doba {
+    margin-bottom: 20px; /* Přidání mezery mezi bloky */
+  }
+
+  .pataText p i {
+    width: auto; /* Ikony nebudou mít pevnou šířku, aby se přizpůsobily */
+  }
+
+  .karty {
+    text-align: center; /* Zarovnání ikon platebních metod */
+  }
+}
