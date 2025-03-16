@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Lampičky Catering</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Anton&family=Caveat:wght@400..700&family=Great+Vibes&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+
+  <!-- MDB (Material Design Bootstrap) -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  
+  <!-- Vlastní CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lightbox.css">
+
+  <!-- Vlastní JavaScript -->
+  <script defer src="script.js"></script> <!-- defer = spustí se až po načtení stránky -->
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <header>
+    <div class="container">
+      <div class="headerTop">
+        <div class="logoup">
+          <a class="odkaz" href="index.php"><img src="photo/logo lampy 2025-2.jpg" alt=""></a>
+        </div>
+        <!-- <div class="engIcon">
+          <a href="#" target="_blank"><img src="photo/2634450_ensign_flag_kingdom_nation_icon.png">English version</a>
+        </div> -->
+      </div>
+    </div>
+    <!-- Intro settings -->
+    <header class="header">
+      <div class="text-section">
+        <h1>EVENTS & CATERING</h1>
+        <h2>Perfect service</h2>
+
+      </div>
+      <img src="photo/profilovka1.jpg" alt="Fotka" class="image">
+    </header>
+    <!-- Background image -->
+  </header>
+
+  <main>
+
+    <section class="descrpt">
+      <div class="text">
+        <p>Ať už plánujete firemní večírek, svatbu nebo soukromou oslavu, postaráme se o skvělé jídlo, které nadchne vaše hosty. Na míru uspořádáme hostinu dle vašich požadavků. S námi si užijete bezstarostný catering plný poctivých chutí!</p>
+      </div>
+    </section>
+
+    <section class="descrpt-types">
+      <div class="b-text">
+        <h1><i class="fa-regular fa-heart"></i><strong>Svatby</strong></h1>
+        <p>Svatbu uspořádáme formou bufetu či servírovaného Menu. Po celou dobu se o vás bude starat profesionální a milý personál.</p>
+      </div>
+      <div class="b-text">
+        <h1><i class="fa-solid fa-handshake-angle"></i><strong>Firemní eventy</strong></h1>
+        <p>Uspořádejte nezapomenutelný večírek pro své zaměstnance či obchodní partnery, jsme garance úspěchu.</p>
+      </div>
+      <div class="b-text">
+        <h1><i class="fa-solid fa-globe"></i></i><strong>Konference a školení</strong></h1>
+        <p>Servírujeme například kávu, čaj, domácí limonády,  kanapky, chlebíčky, ovoce a dezerty.</p>
+      </div>
+
+    </section>
+
+
+
+
+    <section class="photogallery">
+      <h1>Fotogalerie</h1>
+     <div class="containerphoto">
+      <div class="subcontainer">
+
+        <div class="grid">
+          <a href="photo/svatba.jpg"  data-title="svatba" data-lightbox="svatba-svatba" class="img"></a>
+          <a href="photo/Classic.jpg"  data-title="svatba" data-lightbox="svatba-svatba" class="img"></a>
+          <a href="photo/Bluecheese.jpg"  data-title="svatba" data-lightbox="svatba-svatba" class="img"></a>
+          <a href="photo/lampy1.jpeg"  data-title="svatba" data-lightbox="svatba-svatba" class="img"></a>
+        </div>
+
+      </div>
+
+     </div>
+    </section>
+
+
+
+
+    <section class="catering-form">
+      <h1>NEZÁVAZNÁ POPTÁVKA</h1>
+      <div class="catering-box">
+        <form action="mailer.php" method="post" class="box">
+          <input type="text" name="name" placeholder="Jméno a Příjmení">
+          <input type="email" name="email" placeholder="Email">
+          <input type="text" name="phone" placeholder="Telefonní číslo">
+          <input type="Date" name="date" placeholder="Datum události">
+          <input type="text" name="place" placeholder="Místo konání">
+          <input type="text" name="number" placeholder="Počet osob">
+          <select name="form" id="">
+            <option value="privatni akce">Privátní akce</option>
+            <option value="firemni akce">Firemní akce</option>
+            <option value="svatba">Svatba</option>
+            <option value="jine">Jiné</option>
+          </select>
+          <textarea name="message" cols="30" rows="10" placeholder="Zpráva"></textarea>
+          <button class="butt" type="submit">Odeslat</button>
+        </form>
+      </div>
+
+    </section>
+
+
+
+  </main>
+
+
+
+
+  <footer>
+    <!-- kontakty -->
+    <section>
+      <div class="kontakt">
+        <div class="cont">
+          <div class="kontaktGrey">
+            <h1>Kontakt</h1>
+            <div class="kontaktFlex">
+              <div class="pataText">
+                <p><i class="fa-solid fa-map-pin"></i><b>Restaurant Lampičky</b>, Hartigova 173, Praha 3
+                </p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:+420720032300" class="odkaz">+420 / 720 032 300</a>
+                </p>
+                <p><i class="fa-regular fa-envelope"></i><span>info@cafebarlampicky.cz</span></p>
+              </div>
+              <div class="pataText">
+                <p></p>
+              </div>
+              <div class="doba">
+                <p><b>Otevírací doba:</b></p>
+                <p><b>Ne - Čt:</b> 11h - 23h - kuchyně do 22:00 hod</p>
+                <p><b>Pa = So:</b> 11h - 00h - kuchyně do 22:00 hod</p>
+              </div>
+            </div>
+            <div class="karty">
+              <p>Přijímáme tyto platební karty</p>
+              <i class="fa-brands fa-cc-visa"></i>
+              <i class="fa-brands fa-cc-mastercard"></i>
+              <i class="fa-brands fa-paypal"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.6708329882067!2d14.478384576014392!3d50.09244947152601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94860ee0a281%3A0x6e4dc425af6edecb!2zQ2Fmw6kgQmFyIExhbXBpxI1reQ!5e0!3m2!1scs!2scz!4v1697559159099!5m2!1scs!2scz"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <div class="socIcon">
+        <a href="https://facebook.com" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://linktr.ee" target="_blank">
+          <i class="fa-solid fa-link"></i>
+        </a>
+      </div>
+
+      <div class="copyright">
+        <p>Copyright Restaurant Lampičky 2025</p>
+      </div>
+
+  </footer>
+
+
+
+  <!-- End your project here-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+  <script src="lightbox-plus-jquery.js"></script>
+</body>
+
+</html>
