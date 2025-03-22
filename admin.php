@@ -121,8 +121,6 @@ if (!array_key_exists("prihlaseny_uzivatel", $_SESSION)) {
                     <?php foreach ($pole_stranek as $id => $stranka) { ?>
                         <li class="list-group-item">
                             <a class="btn btn-primary" href="?id-stranky=<?php echo $id; ?>&lang=<?php echo $lang; ?>">Editovat</a>
-                            <a class="btn btn-secondary" href="<?php echo $id; ?>" target="_blank">Zobrazit</a>
-                            <?php echo htmlspecialchars($id); ?>
                         </li>
                     <?php } ?>
                 </ul>
