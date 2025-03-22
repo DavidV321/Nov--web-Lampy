@@ -305,7 +305,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
         </div>
 
     </footer>
-
+    <?php include 'cookies.php'; ?>
 
 
     <!-- End your project here-->
