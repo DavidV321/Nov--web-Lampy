@@ -153,25 +153,34 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
         <div id="carouselExampleControls" class="carousel slide" data-mdb-ride="carousel" data-mdb-carousel-init>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="photo/Farmers.jpg" class="d-block w-100" alt="Wild Landscape" />
+              <img src="photo/Burger2.jpg" class="d-block w-100" alt="Wild Landscape" />
             </div>
             <div class="carousel-item">
-              <img src="photo/3.jpg" class="d-block w-100" alt="Camera" />
+              <img src="photo/Burger1.jpg" class="d-block w-100" alt="Camera" />
             </div>
             <div class="carousel-item">
-              <img src="photo/26804436_2144539045793229_399723124368036425_n.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Burger3.jpg" class="d-block w-100" alt="Exotic Fruits" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Bluecheese.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Burger4.jpg" class="d-block w-100" alt="Exotic Fruits" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Barbie.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Burger6.jpg" class="d-block w-100" alt="Exotic Fruits" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Italiano.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Burger10.jpg" class="d-block w-100" alt="Exotic Fruits" />
             </div>
             <div class="carousel-item">
-              <img src="photo/trhan.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Jidlo1.jpg" class="d-block w-100" alt="Exotic Fruits" />
+            </div>
+            <div class="carousel-item">
+              <img src="photo/Jidlo2.jpg" class="d-block w-100" alt="Exotic Fruits" />
+            </div>
+            <div class="carousel-item">
+              <img src="photo/Lampicky1.jpg" class="d-block w-100" alt="Exotic Fruits" />
+            </div>
+            <div class="carousel-item">
+              <img src="photo/lampy1.jpeg" class="d-block w-100" alt="Exotic Fruits" />
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="prev">

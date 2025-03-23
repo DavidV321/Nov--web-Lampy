@@ -18,6 +18,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Anton&family=Caveat:wght@400..700&family=Great+Vibes&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
 
   <!-- MDB (Material Design Bootstrap) -->
   <link rel="stylesheet" href="css/mdb.min.css" />
@@ -76,31 +78,42 @@
         <h1><i class="fa-solid fa-globe"></i></i><strong>Konference a školení</strong></h1>
         <p>Servírujeme například kávu, čaj, domácí limonády,  kanapky, chlebíčky, ovoce a dezerty.</p>
       </div>
-
     </section>
-
-
-
 
     <section class="photogallery">
       <h1>Fotogalerie</h1>
-     <div class="containerphoto">
-      <div class="subcontainer">
-
-        <div class="grid">
-          <a href="photo/svatba.jpg"  data-title="svatba" data-lightbox="svatba-svatba" class="img"></a>
-          <a href="photo/Classic.jpg"  data-title="svatba" data-lightbox="svatba-svatba" class="img"></a>
-          <a href="photo/Bluecheese.jpg"  data-title="svatba" data-lightbox="svatba-svatba" class="img"></a>
-          <a href="photo/lampy1.jpeg"  data-title="svatba" data-lightbox="svatba-svatba" class="img"></a>
+      <div class="containerphoto">
+        <div class="subcontainer">
+          <div class="grid">
+            <a href="photo/svatba.jpg" data-lightbox="gallery" data-title="Svatba">
+              <img src="photo/svatba.jpg" alt="Svatba">
+            </a>
+            <a href="photo/svatba2.jpg" data-lightbox="gallery" data-title="Svatba 2">
+              <img src="photo/svatba2.jpg" alt="Svatba 2">
+            </a>
+            <a href="photo/cat1.jpg" data-lightbox="gallery" data-title="Sushi">
+              <img src="photo/cat1.jpg" alt="Sushi">
+            </a>
+            <a href="photo/cat2.jpg" data-lightbox="gallery" data-title="Menu 1">
+              <img src="photo/cat2.jpg" alt="Menu 1">
+            </a>
+            <a href="photo/cat3.jpg" data-lightbox="gallery" data-title="Menu 2">
+              <img src="photo/cat3.jpg" alt="Menu 2">
+            </a>
+            <a href="photo/cat4.jpg" data-lightbox="gallery" data-title="Menu 3">
+              <img src="photo/cat4.jpg" alt="Menu 3">
+            </a>
+            <a href="photo/cat5.jpg" data-lightbox="gallery" data-title="Menu 4">
+              <img src="photo/cat5.jpg" alt="Menu 4">
+            </a>
+            <a href="photo/cat6.jpg" data-lightbox="gallery" data-title="Menu 5">
+              <img src="photo/cat6.jpg" alt="Menu 5">
+            </a>
+            
+          </div>
         </div>
-
       </div>
-
-     </div>
     </section>
-
-
-
 
     <section class="catering-form">
       <h1>NEZÁVAZNÁ POPTÁVKA</h1>
@@ -125,12 +138,7 @@
 
     </section>
 
-
-
   </main>
-
-
-
 
   <footer>
     <!-- kontakty -->
@@ -194,10 +202,17 @@
   <!-- End your project here-->
 
   <!-- MDB -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript"></script>
-  <script src="lightbox-plus-jquery.js"></script>
+ <!-- MDB -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+
+<!-- jQuery (Lightbox ho potřebuje) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+<!-- Tvůj vlastní JavaScript -->
+<script defer src="script.js"></script>
 </body>
 
 </html>

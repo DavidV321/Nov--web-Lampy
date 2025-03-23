@@ -531,16 +531,12 @@ iframe {
 .photogallery {
   width: 100%;
   text-align: center;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin: 100px 0;
   font-family: "Roboto Mono", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .containerphoto {
-  width: 1600px;
+  max-width: 1600px;
   margin: auto;
 }
 
@@ -551,39 +547,33 @@ iframe {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
   padding: 10px;
-  overflow-x: hidden;
 }
 
-.img {
+.grid a {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.grid img {
   width: 100%;
-  min-height: 275px;
-  background-position: center;
-  background-size: cover;
+  height: 275px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-.img:nth-last-child(1){
-  background-image: url(photo/svatba.jpg);
-} 
+.grid img:hover {
+  transform: scale(1.05);
+}
 
-.img:nth-last-child(2){
-  background-image: url(photo/Classic.jpg);
-} 
-
-.img:nth-last-child(3){
-  background-image: url(photo/Bluecheese.jpg);
-} 
-
-.img:nth-last-child(4){
-  background-image: url(photo/lampy1.jpeg);
-} 
-
-
-@media(max-width:1600px){
-  .containerphoto{
-      width: 100%;
+/* Responsivita */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
 
