@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^lampickyrestaurant\.cz [NC]
+RewriteRule ^(.*)$ https://www.lampickyrestaurant.cz/$1 [L,R=301]

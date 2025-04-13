@@ -24,8 +24,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die("Vyplňte všechna povinná pole.");
     }
 
+    // Kontrola data - rezervace pouze od zítřka dál
+    $event_date_ts = strtotime($event_date);
+    $tomorrow_ts = strtotime('tomorrow');
+
+    if ($event_date_ts < $tomorrow_ts) {
+        die("Rezervace lze provádět pouze od zítřejšího dne.");
+    }
+
     // Ochrana proti spamu - Captcha nebo Honeypot
-    if (!empty($_POST['honeypot'])) { // Skryté pole, které by boty měly vyplnit
+    if (!empty($_POST['honeypot'])) {
         die("Neplatná rezervace.");
     }
 

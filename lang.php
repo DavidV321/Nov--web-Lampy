@@ -15,8 +15,9 @@ $lang = $_SESSION["lang"] ?? "cs";
 $texts = [
     "cs" => [
         "title" => "Lampičky restaurant",
-        "restaurant_desc" => 'Lampičky restaurant, umístěný v části Žižkov - Jarov. Domov skvělých burgerů a poctivých jídel. Máte chuť na pořádný burger z kvalitního masa, křupavé hranolky a omáčky, které si zamilujete? Nebo hledáte polední menu, které vás zasytí a potěší domácí chutí? Ať už k nám zavítáte na rychlý oběd, pohodovou večeři nebo jen na drink s přáteli, vždy vás čeká skvělá atmosféra a poctivá porce chuti. Pivo čepujeme od našeho otevření %s z pivovaru %s, a to přímo z tanku, skvělého Bohéma od Krušovic a pro fanoušky speciálů měníme na čepu různé typy piv zejména Polotmavého Beránka, ale i IPU, ALE...',
-        "restaurant_desc_2" => "Protože jsme vždy věřili, že kvalita začíná v kuchyni, připravujeme si sami omáčky, pečeme bulky na naše burgery a při přípravě dezertů sázíme na poctivou výrobu a poctivou chuť. Přijďte si užít nejen burger, ale veškeré naše pokrmy, které vznikají s láskou a důrazem na kvalitu.",
+        "restaurant_desc" => 'Lampičky restaurant se nachází v pražské části Žižkov - Jarov. Je domovem skvělých burgerů a poctivých jídel. Máte chuť na pořádný burger z kvalitního masa, křupavé hranolky a omáčky, které si zamilujete? Nebo hledáte polední menu, které vás zasytí a potěší domácí chutí? Ať už k nám zavítáte na rychlý oběd, pohodovou večeři nebo jen na drink s přáteli, vždy vás čeká příjemná atmosféra a poctivá porce chuti. Pivo čepujeme od našeho otevření - %s z pivovaru %s, a to přímo z tanku Dále nabízíme skvělého Bohéma z Krušovic a pro milovníky speciálů pravidelně obměňujeme nabídku na čep – od Polotmavého Beránka až po různé druhy IPA a ALE',
+        "restaurant_desc_2" => "Protože věříme, že kvalita začíná v kuchyni, připravujeme si všechny omáčky sami, pečeme vlastní housky na burgery a při přípravě dezertů sázíme na poctivou výrobu a skutečnou chuť. Přijďte si užít nejen naše burgery, ale i další pokrmy, které vznikají s láskou a důrazem na kvalitu.
+        ",
         "menu" => "MENU",
         "drinks" => "NÁPOJE",
         "gallery" => "GALERIE",
