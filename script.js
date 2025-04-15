@@ -1,81 +1,94 @@
-// načítání menu bez refresh stránky
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Klikání na položky jídelního menu
-    document.querySelectorAll(".menu nav a").forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            let id = this.getAttribute("href").split("=")[1];
+  // Načítání jídelního menu bez reloadu (s event delegation)
+  const menuNav = document.querySelector(".menu nav");
+  if (menuNav) {
+      menuNav.addEventListener("click", function (event) {
+          const link = event.target.closest("a");
+          if (!link) return;
 
-            fetch("load-content.php?id-stranky=" + id)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("food-menu-wraper").innerHTML = data; // Obsah jídel
-                })
-                .catch(error => console.error("Chyba při načítání jídla:", error));
-        });
-    });
+          event.preventDefault();
+          const id = link.getAttribute("href").split("=")[1];
 
-    // Klikání na položky nápojového menu
-    document.querySelectorAll(".drink-menu nav a").forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            let id = this.getAttribute("href").split("=")[1];
+          // Fallback pro Safari, pokud fetch selže
+          const xhr = new XMLHttpRequest();
+          xhr.open("GET", "load-content.php?id-stranky=" + id, true);
+          xhr.onload = function () {
+              if (xhr.status === 200) {
+                  document.getElementById("food-menu-wraper").innerHTML = xhr.responseText;
+              } else {
+                  console.error("Chyba při načítání jídla:", xhr.status);
+              }
+          };
+          xhr.send();
+      });
+  }
 
-            fetch("load-content.php?id-napoj=" + id)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("drink-menu-wraper").innerHTML = data; // Obsah nápojů
-                })
-                .catch(error => console.error("Chyba při načítání nápojů:", error));
-        });
-    });
-});
+  // Načítání nápojového menu bez reloadu (s event delegation)
+  const drinkNav = document.querySelector(".drink-menu nav");
+  if (drinkNav) {
+      drinkNav.addEventListener("click", function (event) {
+          const link = event.target.closest("a");
+          if (!link) return;
 
-// scroll z button na rezervace
+          event.preventDefault();
+          const id = link.getAttribute("href").split("=")[1];
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".buttons button:nth-child(2)").addEventListener("click", function (event) {
-        event.preventDefault(); // Zabrání výchozímu chování tlačítka
+          const xhr = new XMLHttpRequest();
+          xhr.open("GET", "load-content.php?id-napoj=" + id, true);
+          xhr.onload = function () {
+              if (xhr.status === 200) {
+                  document.getElementById("drink-menu-wraper").innerHTML = xhr.responseText;
+              } else {
+                  console.error("Chyba při načítání nápojů:", xhr.status);
+              }
+          };
+          xhr.send();
+      });
+  }
 
-        const rezervaceSekce = document.getElementById("rezervace");
-        if (rezervaceSekce) {
-            rezervaceSekce.scrollIntoView({ behavior: "smooth" });
-        }
-    });
-});
+  // Scroll na sekci rezervace (s fallbackem pro Safari)
+  const rezervaceBtn = document.querySelector(".buttons button:nth-child(2)");
+  if (rezervaceBtn) {
+      rezervaceBtn.addEventListener("click", function (event) {
+          event.preventDefault();
+          const rezervaceSekce = document.getElementById("rezervace");
+          if (rezervaceSekce) {
+              if ("scrollBehavior" in document.documentElement.style) {
+                  rezervaceSekce.scrollIntoView({ behavior: "smooth" });
+              } else {
+                  const top = rezervaceSekce.getBoundingClientRect().top + window.pageYOffset;
+                  window.scrollTo(0, top);
+              }
+          }
+      });
+  }
 
-// úprava menu - podržené menu
-
-document.addEventListener("DOMContentLoaded", function () {
-    const allMenus = document.querySelectorAll("nav ul"); // Najde všechna menu
-  
-    allMenus.forEach((menu) => {
+  // Aktivní položka v menu podle cesty (Safari-safe)
+  const allMenus = document.querySelectorAll("nav ul");
+  allMenus.forEach((menu) => {
       const menuItems = menu.querySelectorAll("li a");
       let activeFound = false;
-  
-      // Procházení položek v menu a hledání shody s URL
+
       menuItems.forEach((item) => {
-        if (item.href === window.location.href) {
-          item.classList.add("active");
-          activeFound = true;
-        }
+          const itemPath = new URL(item.href).pathname;
+          const currentPath = window.location.pathname;
+          if (itemPath === currentPath) {
+              item.classList.add("active");
+              activeFound = true;
+          }
       });
-  
-      // Pokud žádná položka není aktivní, nastavíme první jako výchozí
+
       if (!activeFound && menuItems.length > 0) {
-        menuItems[0].classList.add("active");
+          menuItems[0].classList.add("active");
       }
-  
-      // Přidání event listeneru pro změnu aktivní položky při kliknutí
+
       menuItems.forEach((item) => {
-        item.addEventListener("click", function () {
-          menuItems.forEach((el) => el.classList.remove("active"));
-          this.classList.add("active");
-        });
+          item.addEventListener("click", function () {
+              menuItems.forEach((el) => el.classList.remove("active"));
+              this.classList.add("active");
+          });
       });
-    });
   });
 
-  // cookies
-  
+  // případně cookies / další funkcionalitu
+});

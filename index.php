@@ -301,7 +301,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
           <a href="https://www.facebook.com/cafelampicky/" target="_blank">
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a href="https:/www.instagram.com/cafebar_lampicky/" target="_blank">
+          <a href="https://www.instagram.com/lampicky_restaurant/" target="_blank">
             <i class="fa-brands fa-instagram"></i>
           </a>
           <a href="https://linktr.ee" target="_blank">
@@ -323,7 +323,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
