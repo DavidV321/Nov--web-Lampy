@@ -1,6 +1,7 @@
 <?php
 require_once "./data.php";
 require_once "lang.php";
+include 'cookies.php'; 
 
 // Defaultní ID pro jídlo a nápoje
 $idStranky = "obedy";
@@ -46,7 +47,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
   <link rel="stylesheet" href="lightbox.css">
 
   <!-- Vlastní JavaScript -->
-  <script defer src="script.js"></script> <!-- defer = spustí se až po načtení stránky -->
+  
 </head>
 
 <body>

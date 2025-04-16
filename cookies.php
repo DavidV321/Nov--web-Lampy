@@ -1,9 +1,4 @@
-<?php
-if (isset($_POST['cookie_consent'])) {
-    setcookie('cookie_consent', $_POST['cookie_consent'], time() + (86400 * 30), "/"); // Platnost 30 dní
-    exit;
-}
-?>
+<?php if (!isset($_COOKIE['cookie_consent'])): ?>
 
 <style>
     #cookie-banner {
@@ -16,7 +11,7 @@ if (isset($_POST['cookie_consent'])) {
         text-align: center;
         padding: 5px;
         font-size: 13px;
-        display: <?php echo isset($_COOKIE['cookie_consent']) ? 'none' : 'flex'; ?>;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
@@ -47,34 +42,12 @@ if (isset($_POST['cookie_consent'])) {
 </style>
 
 <div id="cookie-banner">
-    <p>Tento web používá cookies ke zlepšení uživatelského zážitku.</p>
-    <div class="buttons">
-        <button onclick="acceptCookies()">Souhlasím</button>
-        <button class="reject" onclick="rejectCookies()">Odmítnout</button>
-        <button onclick="openSettings()">Nastavení</button>
-    </div>
+  <p>Tento web používá cookies ke zlepšení uživatelského zážitku.</p>
+  <div class="buttons">
+    <button id="accept-cookies">Souhlasím</button>
+    <button class="reject" id="reject-cookies">Odmítnout</button>
+    <button onclick="openSettings()">Nastavení</button>
+  </div>
 </div>
 
-<script>
-    function acceptCookies() {
-        document.getElementById('cookie-banner').style.display = 'none';
-        fetch('', { 
-            method: 'POST', 
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, 
-            body: 'cookie_consent=accepted' 
-        });
-    }
-
-    function rejectCookies() {
-        document.getElementById('cookie-banner').style.display = 'none';
-        fetch('', { 
-            method: 'POST', 
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, 
-            body: 'cookie_consent=rejected' 
-        });
-    }
-
-    function openSettings() {
-        alert('Zde by bylo možné nastavit typy cookies.');
-    }
-</script>
+<?php endif; ?>
