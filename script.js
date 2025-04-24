@@ -93,29 +93,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // případně cookies / další funkcionalitu
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const acceptBtn = document.getElementById("accept-cookies");
-    const rejectBtn = document.getElementById("reject-cookies");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const acceptBtn = document.getElementById("accept-cookies");
+//     const rejectBtn = document.getElementById("reject-cookies");
   
-    if (acceptBtn) {
-      acceptBtn.addEventListener("click", function () {
-        document.getElementById('cookie-banner').style.display = 'none';
-        fetch('set-cookie.php', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: 'cookie_consent=accepted'
-        });
-      });
-    }
+//     if (acceptBtn) {
+//       acceptBtn.addEventListener("click", function () {
+//         document.getElementById('cookie-banner').style.display = 'none';
+//         fetch('set-cookie.php', {
+//           method: 'POST',
+//           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+//           body: 'cookie_consent=accepted'
+//         });
+//       });
+//     }
   
-    if (rejectBtn) {
-      rejectBtn.addEventListener("click", function () {
-        document.getElementById('cookie-banner').style.display = 'none';
-        fetch('set-cookie.php', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: 'cookie_consent=rejected'
-        });
-      });
-    }
-  });
+//     if (rejectBtn) {
+//       rejectBtn.addEventListener("click", function () {
+//         document.getElementById('cookie-banner').style.display = 'none';
+//         fetch('set-cookie.php', {
+//           method: 'POST',
+//           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+//           body: 'cookie_consent=rejected'
+//         });
+//       });
+//     }
+//   });

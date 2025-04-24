@@ -1,7 +1,7 @@
 <?php
 require_once "./data.php";
 require_once "lang.php";
-include 'cookies.php'; 
+// include 'cookies.php'; 
 
 // Defaultní ID pro jídlo a nápoje
 $idStranky = "obedy";
@@ -44,7 +44,8 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
 
   <!-- Vlastní CSS -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="lightbox.css">
+  <!-- <link rel="stylesheet" href="lightbox.css"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 
   <!-- Vlastní JavaScript -->
   
@@ -154,34 +155,34 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
         <div id="carouselExampleControls" class="carousel slide" data-mdb-ride="carousel" data-mdb-carousel-init>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="photo/Burger2.jpg" class="d-block w-100" alt="Wild Landscape" />
+              <img src="photo/Burger2.jpg" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Burger1.jpg" class="d-block w-100" alt="Camera" />
+              <img src="photo/burger1.jpg" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Burger3.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Burger3.jpg" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Burger4.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Burger4.jpg" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Burger6.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Burger6.jpg" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Burger10.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Burger10.jpg" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Jidlo1.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Jidlo1.jpg" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Jidlo2.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Jidlo2.jpg" class="d-block w-100" alt="food" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Lampicky1.jpg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/Lampicky1.jpg" class="d-block w-100" alt="lampicky" />
             </div>
             <div class="carousel-item">
-              <img src="photo/lampy1.jpeg" class="d-block w-100" alt="Exotic Fruits" />
+              <img src="photo/lampy1.jpeg" class="d-block w-100" alt="lampicky" />
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="prev">
@@ -299,13 +300,13 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.6708329882067!2d14.478384576014392!3d50.09244947152601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94860ee0a281%3A0x6e4dc425af6edecb!2zQ2Fmw6kgQmFyIExhbXBpxI1reQ!5e0!3m2!1scs!2scz!4v1697559159099!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         <div class="socIcon">
-          <a href="https://www.facebook.com/cafelampicky/" target="_blank">
+          <a href="https://www.facebook.com/Lampickyrestaurant/" target="_blank">
             <i class="fa-brands fa-facebook"></i>
           </a>
           <a href="https://www.instagram.com/lampicky_restaurant/" target="_blank">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://linktr.ee" target="_blank">
+          <a href="https://linktr.ee/lampickyrestaurant" target="_blank">
             <i class="fa-solid fa-link"></i>
           </a>
         </div>
@@ -315,7 +316,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
         </div>
 
     </footer>
-    <?php include 'cookies.php'; ?>
+    <!-- <?php include 'cookies.php'; ?> -->
 
 
     <!-- End your project here-->

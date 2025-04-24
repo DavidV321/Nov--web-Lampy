@@ -183,7 +183,7 @@ main {
 .text {
   width: 65%;            
   margin: 0 auto;        /* Centrovaní na stránce */
-  text-align: left;    /* Zarovnání textu na střed (volitelné) */
+  text-align: justify;    /* Zarovnání textu na střed (volitelné) */
   font-family: "Roboto Mono", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -316,6 +316,15 @@ nav ul li a.active::after {
 .menu-wraper {
   max-width: 800px; /* Omezí šířku menu */
   margin: 30px auto; /* Centrované na stránce */
+}
+
+.lunch-date h3 {
+  text-align: center;
+  margin: 40px auto;
+  display: inline-block; /* Zajistí, že zarovnání bude fungovat i jako blok */
+}
+.lunch-date {
+  text-align: center; /* A obalová div se postará o zarovnání samotného inline-blocku */
 }
 
 .menu-text h3 {
