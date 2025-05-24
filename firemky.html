@@ -119,23 +119,57 @@
       <h1>NEZÁVAZNÁ POPTÁVKA</h1>
       <div class="catering-box">
         <form action="mailer.php" method="post" class="box">
-          <input type="text" name="name" placeholder="Jméno a Příjmení">
-          <input type="email" name="email" placeholder="Email">
-          <input type="text" name="phone" placeholder="Telefonní číslo">
-          <input type="Date" name="date" placeholder="Datum události">
-          <input type="text" name="place" placeholder="Místo konání">
-          <input type="text" name="number" placeholder="Počet osob">
-          <select name="form" id="">
-            <option value="privatni akce">Privátní akce</option>
-            <option value="firemni akce">Firemní akce</option>
-            <option value="svatba">Svatba</option>
-            <option value="jine">Jiné</option>
-          </select>
-          <textarea name="message" cols="30" rows="10" placeholder="Zpráva"></textarea>
+    
+          <div class="form-group">
+            <label for="cf_name">Jméno a Příjmení</label>
+            <input type="text" id="cf_name" name="name" placeholder="Jméno a Příjmení">
+          </div>
+    
+          <div class="form-group">
+            <label for="cf_email">Email</label>
+            <input type="email" id="cf_email" name="email" placeholder="Email">
+          </div>
+    
+          <div class="form-group">
+            <label for="cf_phone">Telefonní číslo</label>
+            <input type="text" id="cf_phone" name="phone" placeholder="Telefonní číslo">
+          </div>
+    
+          <div class="form-group">
+            <label for="cf_date">Datum události</label>
+            <input type="date" id="cf_date" name="date" placeholder="Datum události">
+          </div>
+    
+          <div class="form-group">
+            <label for="cf_place">Místo konání</label>
+            <input type="text" id="cf_place" name="place" placeholder="Místo konání">
+          </div>
+    
+          <div class="form-group">
+            <label for="cf_number">Počet osob</label>
+            <input type="text" id="cf_number" name="number" placeholder="Počet osob">
+          </div>
+    
+          <div class="form-group">
+            <label for="cf_form_type">Typ akce</label>
+            <select name="form" id="cf_form_type">
+              <option value="" disabled selected>Vyberte typ akce</option>
+              <option value="privatni akce">Privátní akce</option>
+              <option value="firemni akce">Firemní akce</option>
+              <option value="svatba">Svatba</option>
+              <option value="jine">Jiné</option>
+            </select>
+          </div>
+    
+          <div class="form-group">
+            <label for="cf_message">Zpráva</label>
+            <textarea id="cf_message" name="message" cols="30" rows="10" placeholder="Zpráva"></textarea>
+          </div>
+    
           <button class="butt" type="submit">Odeslat</button>
+          
         </form>
       </div>
-
     </section>
 
   </main>

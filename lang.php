@@ -14,7 +14,7 @@ $lang = $_SESSION["lang"] ?? "cs";
 // Překlady
 $texts = [
     "cs" => [
-        "title" => "Lampičky restaurant",
+        "title" => "Lampičky Restaurant | Restaurace Praha 3 – Jarov | Polední menu & burgery",
         "restaurant_desc" => 'Lampičky restaurant se nachází v pražské části Žižkov - Jarov. Je domovem skvělých burgerů a poctivých jídel. Máte chuť na pořádný burger z kvalitního masa, křupavé hranolky a omáčky, které si zamilujete? Nebo hledáte polední menu, které vás zasytí a potěší domácí chutí? Ať už k nám zavítáte na rychlý oběd, pohodovou večeři nebo jen na drink s přáteli, vždy vás čeká příjemná atmosféra a poctivá porce chuti. Pivo čepujeme od našeho otevření - %s z pivovaru %s, a to přímo z tanku Dále nabízíme skvělého Bohéma z Krušovic a pro milovníky speciálů pravidelně obměňujeme nabídku na čep – od Polotmavého Beránka až po různé druhy IPA a ALE',
         "restaurant_desc_2" => "Protože věříme, že kvalita začíná v kuchyni, připravujeme si všechny omáčky sami, pečeme vlastní housky na burgery a při přípravě dezertů sázíme na poctivou výrobu a skutečnou chuť. Přijďte si užít nejen naše burgery, ale i další pokrmy, které vznikají s láskou a důrazem na kvalitu.
         ",
@@ -47,7 +47,7 @@ $texts = [
 
     ],
     "en" => [
-        "title" => "Lampičky Restaurant",
+        "title" => "Lampičky Restaurant | Restaurant Prague 3 – Jarov | Lunch menu & burgery",
         "restaurant_desc" => 'Lampičky restaurant, located in the Žižkov - Jarov district. Home of great burgers and honest meals. Do you crave a proper burger made from high-quality meat, crispy fries, and sauces you will love? Or are you looking for a lunch menu that fills you up and delights you with a homemade taste? Whether you visit us for a quick lunch, a relaxing dinner, or just a drink with friends, you can always expect a great atmosphere and an honest portion of flavor. We have been serving beer since our opening %s from the %s brewery, straight from the tank, excellent Bohém from Krušovice, and for craft beer fans, we rotate different types of beers, especially the Semi-dark Beránek, as well as IPA, ALE...',
         "restaurant_desc_2" => "Because we have always believed that quality starts in the kitchen, we prepare our own sauces, bake buns for our burgers, and rely on honest craftsmanship and taste when making desserts. Come and enjoy not just our burgers but all of our dishes, which are created with love and a focus on quality.",
         "menu" => "MENU",

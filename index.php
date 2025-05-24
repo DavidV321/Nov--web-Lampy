@@ -26,6 +26,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <title><?php echo $t["title"]; ?></title>
+  <meta name="description" content="Lampičky Restaurant – restaurace na Praze 3, Jarov. Nabízíme polední menu, burgery, českou i mezinárodní kuchyni, pivo a zahrádku u zastávky Strážní.">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/x-icon" />
@@ -48,7 +49,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 
   <!-- Vlastní JavaScript -->
-  
+
 </head>
 
 <body>
@@ -57,11 +58,16 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
     <div class="container">
       <div class="headerTop">
         <div class="logoup">
-          <a class="odkaz" href="index.php"><img src="photo/logo lampy 2025-2.jpg" alt=""></a>
+          <a class="odkaz" href="index.php" aria-label="Přejít na úvodní stránku Lampičky restaurant"><img src="photo/logo lampy 2025-2.jpg" alt=""></a>
         </div>
         <div class="engIcon">
-          <a href="?lang=cs"><img src="photo/32202_flag_republic_czech_czech replublic_icon.png" alt="Czech"> Čeština</a> |
-          <a href="?lang=en"><img src="photo/2634450_ensign_flag_kingdom_nation_icon.png" alt="English"> English</a>
+          <a href="?lang=cs">
+            <img src="photo/Czechflag.png" alt="Česká vlajka"> Čeština
+          </a>
+          |
+          <a href="?lang=en">
+            <img src="photo/englishflag.png" alt="English flag"> English
+          </a>
         </div>
       </div>
     </div>
@@ -71,7 +77,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
         <h1>BEERS & BURGERS</h1>
         <h2>Delicious food</h2>
         <div class="buttons">
-          <button><a href="firemky.html"><?php echo $t["Event"]; ?></a></button>
+          <a href="firemky.html"><button><?php echo $t["Event"]; ?></button></a>
           <button><?php echo $t["reservation"]; ?></button>
         </div>
       </div>
@@ -84,26 +90,26 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
       <!-- popis -->
 
       <section class="descrpt">
-    <div class="text">
-        <p>
-            <?php 
+        <div class="text">
+          <p>
+            <?php
             echo sprintf(
-                $t["restaurant_desc"], 
-                '<svg width="120" height="40" xmlns="http://www.w3.org/2000/svg">
+              $t["restaurant_desc"],
+              '<svg width="120" height="40" xmlns="http://www.w3.org/2000/svg">
                     <text x="10" y="25" font-size="16" fill="black">Březňák 11</text>
                     <path d="M10 35 Q 80 25, 130 30" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
                 </svg>',
-                '<svg width="150" height="40">
+              '<svg width="150" height="40">
                     <text x="10" y="25" font-size="16" fill="black">Velké Březno</text>
                     <ellipse cx="70" cy="20" rx="70" ry="15" stroke="black" stroke-width="2" fill="none"/>
                 </svg>'
-            ); 
+            );
             ?>
-        </p>
-        <br>
-        <p><?php echo $t["restaurant_desc_2"]; ?></p>
-    </div>
-</section>
+          </p>
+          <br>
+          <p><?php echo $t["restaurant_desc_2"]; ?></p>
+        </div>
+      </section>
 
       <!-- photo -->
 
@@ -133,7 +139,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
         </nav>
 
         <div id="food-menu-wraper">
-        <?php echo $pole_stranek[$idStranky]->get_obsah($lang); ?>
+          <?php echo $pole_stranek[$idStranky]->get_obsah($lang); ?>
         </div>
       </section>
 
@@ -145,7 +151,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
         </nav>
 
         <div id="drink-menu-wraper">
-        <?php echo $pole_napoju[$idNapoj]->get_obsah($lang); ?>
+          <?php echo $pole_napoju[$idNapoj]->get_obsah($lang); ?>
         </div>
       </section>
 
@@ -200,61 +206,71 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
         <h1><?php echo $t["reservation"]; ?></h1>
 
         <div class="form-main-box">
-    <div class="form-segments">
-        <form action="process_reservation.php" method="post" class="box">
-            <div class="form-grid">
+          <div class="form-segments">
+            <form action="process_reservation.php" method="post" class="box">
+              <div class="form-grid">
+
                 <div class="form-group">
-                    <p class="text1"><?php echo $t["date"]; ?></p>
-                    <input type="date" id="event_date" name="event_date">
-                </div>
-                <div class="form-group">
-                    <p class="text2"><?php echo $t["people"]; ?></p>
-                    <select name="number_of_people" id="box2">
-                        <?php for ($i = 2; $i <= 10; $i++) { ?>
-                            <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                        <?php } ?>
-                    </select>
+                  <label for="event_date"><?php echo $t["date"]; ?></label>
+                  <input type="date" id="event_date" name="event_date">
                 </div>
 
                 <div class="form-group">
-                    <p class="text3"><?php echo $t["time"]; ?></p>
-                    <select name="event_time" id="box3">
-                        <?php for ($i = 11; $i <= 22; $i++) { ?>
-                            <option value="<?php echo $i . ':00'; ?>"><?php echo $i . ':00'; ?></option>
-                        <?php } ?>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <p class="text4"><?php echo $t["duration"]; ?></p>
-                    <select name="visit_duration" id="box4">
-                        <option value="one-hour"><?php echo $t["one_hour"]; ?></option>
-                        <option value="two-hour"><?php echo $t["two_hour"]; ?></option>
-                        <option value="three-hour"><?php echo $t["three_hour"]; ?></option>
-                        <option value="four-hour"><?php echo $t["four_hour"]; ?></option>
-                    </select>
+                  <label for="box2"><?php echo $t["people"]; ?></label>
+                  <select name="number_of_people" id="box2">
+                    <?php for ($i = 2; $i <= 10; $i++) { ?>
+                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                  </select>
                 </div>
 
                 <div class="form-group">
-                    <input type="text" name="full_name" placeholder="<?php echo $t["full_name"]; ?>">
+                  <label for="box3"><?php echo $t["time"]; ?></label>
+                  <select name="event_time" id="box3">
+                    <?php for ($i = 11; $i <= 22; $i++) { ?>
+                      <option value="<?php echo $i . ':00'; ?>"><?php echo $i . ':00'; ?></option>
+                    <?php } ?>
+                  </select>
                 </div>
+
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="<?php echo $t["email"]; ?>">
+                  <label for="box4"><?php echo $t["duration"]; ?></label>
+                  <select name="visit_duration" id="box4">
+                    <option value="one-hour"><?php echo $t["one_hour"]; ?></option>
+                    <option value="two-hour"><?php echo $t["two_hour"]; ?></option>
+                    <option value="three-hour"><?php echo $t["three_hour"]; ?></option>
+                    <option value="four-hour"><?php echo $t["four_hour"]; ?></option>
+                  </select>
                 </div>
+
                 <div class="form-group">
-                    <input type="phone" name="phone" placeholder="<?php echo $t["phone"]; ?>">
+                  <label for="full_name"><?php echo $t["full_name"]; ?></label>
+                  <input type="text" id="full_name" name="full_name" placeholder="<?php echo $t["full_name"]; ?>">
                 </div>
+
+                <div class="form-group">
+                  <label for="email"><?php echo $t["email"]; ?></label>
+                  <input type="email" id="email" name="email" placeholder="<?php echo $t["email"]; ?>">
+                </div>
+
+                <div class="form-group">
+                  <label for="phone"><?php echo $t["phone"]; ?></label>
+                  <input type="tel" id="phone" name="phone" placeholder="<?php echo $t["phone"]; ?>">
+                </div>
+
                 <div class="form-group full-width">
-                    <textarea name="message" placeholder="<?php echo $t["message"]; ?>" cols="30" rows="4"></textarea>
+                  <label for="message"><?php echo $t["message"]; ?></label>
+                  <textarea id="message" name="message" placeholder="<?php echo $t["message"]; ?>" cols="30" rows="4"></textarea>
                 </div>
+
                 <div class="form-group full-width">
-                    <input type="submit" value="<?php echo $t["submit"]; ?>">
+                  <input type="submit" value="<?php echo $t["submit"]; ?>">
                 </div>
-            </div>
-        </form>
-    </div>
-</div>
 
-
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
 
 
@@ -297,16 +313,16 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
           </div>
 
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.6708329882067!2d14.478384576014392!3d50.09244947152601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94860ee0a281%3A0x6e4dc425af6edecb!2zQ2Fmw6kgQmFyIExhbXBpxI1reQ!5e0!3m2!1scs!2scz!4v1697559159099!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.6708329882067!2d14.478384576014392!3d50.09244947152601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94860ee0a281%3A0x6e4dc425af6edecb!2zQ2Fmw6kgQmFyIExhbXBpxI1reQ!5e0!3m2!1scs!2scz!4v1697559159099!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa s umístěním naší provozovny"></iframe>
 
         <div class="socIcon">
-          <a href="https://www.facebook.com/Lampickyrestaurant/" target="_blank">
+          <a href="https://www.facebook.com/Lampickyrestaurant/" target="_blank" aria-label="Facebook – Lampičky restaurant">
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a href="https://www.instagram.com/lampicky_restaurant/" target="_blank">
+          <a href="https://www.instagram.com/lampicky_restaurant/" target="_blank" aria-label="Instagram – Lampičky restaurant">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://linktr.ee/lampickyrestaurant" target="_blank">
+          <a href="https://linktr.ee/lampickyrestaurant" target="_blank" aria-label="Odkazový rozcestník Lampičky restaurant">
             <i class="fa-solid fa-link"></i>
           </a>
         </div>
@@ -322,7 +338,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
     <!-- End your project here-->
 
     <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js" defer></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
     <script src="script.js" defer></script>

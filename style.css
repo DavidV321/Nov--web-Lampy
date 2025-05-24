@@ -47,23 +47,6 @@ a { /* chci, aby se odkazy obecně chovaly takhle: */
   width: 200px; /* Pevná šířka loga */
 }
 
-/* animace loga */
-@keyframes fadeInGlow {
-  0% {
-      filter: brightness(0.3);
-      opacity: 0;
-  }
-  100% {
-      filter: brightness(1);
-      opacity: 1;
-  }
-}
-
-.logoup img {
-  animation: fadeInGlow 2s ease-in-out forwards;
-}
-
-
 .engIcon {
   display: flex;
   align-items: center;
@@ -114,14 +97,15 @@ a { /* chci, aby se odkazy obecně chovaly takhle: */
 .buttons {
   display: flex;
   gap: 10px;
-  
 }
 
-.buttons a {
-  color: #ffffff;
+.a {
+  color: #ffffff; 
+  padding: 10px 50px;
 }
 
 .buttons button {
+  width: 100%; /* Tlačítko vyplní šířku rodiče (a nebo <a>) */
   padding: 10px 20px;
   border: none;
   background-color: black;
@@ -132,7 +116,9 @@ a { /* chci, aby se odkazy obecně chovaly takhle: */
   font-weight: 400;
   font-style: normal;
   border-radius: 10px;
+  white-space: nowrap; /* Zamezí zalomení textu */
 }
+
 .buttons button:hover {
   background-color: rgb(68, 68, 68);
 }
@@ -421,9 +407,10 @@ nav ul li a.active::after {
   grid-column: span 2; /* Prvky, které mají být přes oba sloupce */
 }
 
+/* Tlačítko odeslat */
 input[type="submit"] {
-  background-color: #007bff;
-  color: white;
+  background-color: #007bff; /* modré tlačítko */
+  color: #ffffff;            /* bílý text – dostatečný kontrast */
   border: none;
   padding: 12px;
   font-size: 18px;
@@ -433,7 +420,28 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* tmavší modrá při najetí */
+}
+
+/* Textová pole – dostatečný kontrast */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+  color: #000000;             /* černý text */
+  background-color: #ffffff;  /* bílé pozadí */
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/* Placeholder text – dostatečně tmavý */
+input::placeholder,
+textarea::placeholder {
+  color: #666666;             /* tmavší šedá, aby kontrast byl OK */
+  opacity: 1;                 /* některé prohlížeče snižují neprůhlednost */
 }
 
 
