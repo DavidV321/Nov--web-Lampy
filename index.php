@@ -58,15 +58,15 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
     <div class="container">
       <div class="headerTop">
         <div class="logoup">
-          <a class="odkaz" href="index.php" aria-label="Přejít na úvodní stránku Lampičky restaurant"><img src="photo/logo lampy 2025-2.jpg" alt=""></a>
+          <a class="odkaz" href="index.php" aria-label="Přejít na úvodní stránku Lampičky restaurant"><img src="photo/logo lampy 2025-2.webp" alt=""></a>
         </div>
         <div class="engIcon">
           <a href="?lang=cs">
-            <img src="photo/Czechflag.png" alt="Česká vlajka"> Čeština
+            <img src="photo/Czechflag.webp" alt="Česká vlajka"> Čeština
           </a>
           |
           <a href="?lang=en">
-            <img src="photo/englishflag.png" alt="English flag"> English
+            <img src="photo/englishflag.webp" alt="English flag"> English
           </a>
         </div>
       </div>
@@ -81,7 +81,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
           <button><?php echo $t["reservation"]; ?></button>
         </div>
       </div>
-      <img src="photo/profilovka1.jpg" alt="Fotka" class="image">
+      <img src="photo/profilovka1.webp" alt="Fotka" class="image">
     </header>
 
 
@@ -121,7 +121,7 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
 
       <div class="photo-info">
         <div class="photo-wrap">
-          <img src="photo/zizkov-vez.jpg" alt="">
+          <img src="photo/zizkov-vez.webp" alt="">
         </div>
         <div class="photo-text">
           <h1>Lampičky restaurant</h1>
@@ -161,34 +161,34 @@ if (isset($_GET["id-napoj"]) && array_key_exists($_GET["id-napoj"], $pole_napoju
         <div id="carouselExampleControls" class="carousel slide" data-mdb-ride="carousel" data-mdb-carousel-init>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="photo/Burger2.jpg" class="d-block w-100" alt="burger" />
+              <img src="photo/Burger2.webp" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/burger1.jpg" class="d-block w-100" alt="burger" />
+              <img src="photo/burger1.webp" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Burger3.jpg" class="d-block w-100" alt="burger" />
+              <img src="photo/Burger3.webp" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Burger4.jpg" class="d-block w-100" alt="burger" />
+              <img src="photo/Burger4.webp" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Burger6.jpg" class="d-block w-100" alt="burger" />
+              <img src="photo/Burger6.webp" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Burger10.jpg" class="d-block w-100" alt="burger" />
+              <img src="photo/Burger10.webp" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Jidlo1.jpg" class="d-block w-100" alt="burger" />
+              <img src="photo/Jidlo1.webp" class="d-block w-100" alt="burger" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Jidlo2.jpg" class="d-block w-100" alt="food" />
+              <img src="photo/Jidlo2.webp" class="d-block w-100" alt="food" />
             </div>
             <div class="carousel-item">
-              <img src="photo/Lampicky1.jpg" class="d-block w-100" alt="lampicky" />
+              <img src="photo/Lampicky1.webp" class="d-block w-100" alt="lampicky" />
             </div>
             <div class="carousel-item">
-              <img src="photo/lampy1.jpeg" class="d-block w-100" alt="lampicky" />
+              <img src="photo/lampy1.webp" class="d-block w-100" alt="lampicky" />
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="prev">
